@@ -14,7 +14,7 @@ function App() {
 
   return (
     <Provider store={store}>
-      <div>
+      <div className="TotalScreen">
         {showConditions ? (
           <Conditions onContinue={handleContinue} />
         ) : (

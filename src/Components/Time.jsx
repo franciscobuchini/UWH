@@ -65,9 +65,7 @@ const Time = () => {
   };
 
   const handlePauseContinue = () => {
-    if (timeLeft <= Match_Freezing * 60 * 1000) {
-      setIsPaused(!isPaused);
-    }
+    setIsPaused(!isPaused);
   };
 
   const formatTime = (milliseconds) => {
@@ -79,7 +77,7 @@ const Time = () => {
 
   return (
     <div className="Time">
-      <h1>{formatTime(timeLeft)}</h1>
+      <h2>{formatTime(timeLeft)}</h2>
       <button onClick={handlePauseContinue}>{isPaused ? "Continue" : "Stop"}</button>
     </div>
   );
