@@ -19,7 +19,7 @@
 }
 
 .App_Screen {
-  background-color: var(--primary);
+  background-color: var(--secondary);
 }
 
 .App_Screen > .Header {
@@ -37,3 +37,19 @@
 .App_Screen > .Header > .Header_Game > .Header_Score > .Header_Score_Name {}
 
 .App_Screen > .Header > .Header_Game > .Header_Score > .Header_Score_Goals {}
+
+.App_Screen > .App_Main > .Pool {
+  background-color: var(--primary);
+  border: 2px solid var(--dark);
+}
+
+.App_Screen > .App_Main > .Pool > .Pool_Grid {
+}
+
+.App_Screen > .App_Main > .Pool > .Pool_Grid > .Pool_Area {
+  outline: 1px solid var(--dark);
+}
+
+.App_Screen > .App_Main > .Pool > .Pool_Grid > .Pool_Puck {
+  background-color: var(--tertiary);
+}

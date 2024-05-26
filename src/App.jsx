@@ -5,6 +5,7 @@ import store from '../src/Redux/Store';
 
 import Conditions from './Layouts/Conditions';
 import Header from './Layouts/Header';
+import Pool from './Layouts/Pool';
 
 function App() {
 
@@ -20,6 +21,10 @@ function App() {
         ) : (
           <div className="App_Screen">
             <Header />
+            <div className="App_Main">
+              <Pool />
+            </div>
+            
           </div>
         )}
       </div>

@@ -106,6 +106,67 @@
   width: var(--size);
   height: var(--size);
 }
+
+.App_Screen > .App_Main {
+  display: flex;
+  flex-direction: row;
+
+  height: 100%;
+
+  gap: var(--gap);
+}
+
+.App_Screen > .App_Main > .Pool {
+  width: 40%;
+
+  border-radius: var(--bentogridradius);
+  padding: var(--gap);
+}
+
+.App_Screen > .App_Main > .Pool > .Pool_Grid {
+  position: relative;
+  display: grid;
+  grid-template-rows: 20% 30% 30% 20%;
+  grid-template-columns: 25% 50% 25%;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: var(--bentoradius);
+
+  cursor: pointer;
+}
+
+.App_Screen > .App_Main > .Pool > .Pool_Grid > .Pool_Puck_Group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  transform: translate(-50%, -70%);
+
+  gap: var(--gap);
+}
+
+.App_Screen > .App_Main > .Pool > .Pool_Grid > .Pool_Puck_Group > .Pool_Puck_Timer {
+  border-radius: var(--bentoradius);
+  padding: 0 var(--gap);
+
+  text-align: center;
+
+  z-index: 1000;
+}
+
+.App_Screen > .App_Main > .Pool > .Pool_Grid > .Pool_Puck_Group > .Pool_Puck_Object {
+  width: var(--size);
+  height: var(--size);
+
+  border-radius: var(--bentogridradius);
+}
+
+.App_Screen > .App_Main > .Pool > .Pool_Grid > .Pool_Area {
+  padding: var(--gap);
+}
+
 /* 
 .Input {
   display: flex;
