@@ -1,21 +1,21 @@
-// Time.jsx
+// TIME.jsx
 import React, { useState, useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 
-const Time = () => {
-  const { Match_Date, Match_Duration, Match_Freezing, Match_Halftime } = useSelector(state => state);
+let Time = () => {
+  let { Match_Date, Match_Duration, Match_Freezing, Match_Halftime } = useSelector(state => state);
 
-  const [timeLeft, setTimeLeft] = useState(0);
-  const [isRunning, setIsRunning] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
-  const [phase, setPhase] = useState('countdown'); // 'countdown', 'match', 'halftime', 'match2'
+  let [timeLeft, setTimeLeft] = useState(0);
+  let [isRunning, setIsRunning] = useState(false);
+  let [isPaused, setIsPaused] = useState(false);
+  let [phase, setPhase] = useState('countdown'); // 'countdown', 'match', 'halftime', 'match2'
 
-  const timerRef = useRef(null);
+  let timerRef = useRef(null);
 
   useEffect(() => {
-    const matchDate = new Date(Match_Date).getTime();
-    const now = new Date().getTime();
-    const initialCountdown = matchDate - now;
+    let matchDate = new Date(Match_Date).getTime();
+    let now = new Date().getTime();
+    let initialCountdown = matchDate - now;
 
     if (initialCountdown > 0) {
       setTimeLeft(initialCountdown);
@@ -48,7 +48,7 @@ const Time = () => {
     return () => clearInterval(timerRef.current);
   }, [isRunning, isPaused, phase]);
 
-  const handlePhaseTransition = () => {
+  let handlePhaseTransition = () => {
     if (phase === 'countdown') {
       setPhase('match');
       setTimeLeft(Match_Duration * 60 * 1000);
@@ -64,14 +64,14 @@ const Time = () => {
     }
   };
 
-  const handlePauseContinue = () => {
+  let handlePauseContinue = () => {
     setIsPaused(!isPaused);
   };
 
-  const formatTime = (milliseconds) => {
-    const minutes = Math.floor(milliseconds / (60 * 1000));
-    const seconds = Math.floor((milliseconds % (60 * 1000)) / 1000);
-    const tenths = Math.floor((milliseconds % 1000) / 100);
+  let formatTime = (milliseconds) => {
+    let minutes = Math.floor(milliseconds / (60 * 1000));
+    let seconds = Math.floor((milliseconds % (60 * 1000)) / 1000);
+    let tenths = Math.floor((milliseconds % 1000) / 100);
     return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}:${tenths}`;
   };
 

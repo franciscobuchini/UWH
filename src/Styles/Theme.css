@@ -1,7 +1,39 @@
+:root {
+  --primary: #1089b1;
+  --secondary: #a33e59;
+  --tertiary: #2c973c;
+
+  --transparent: #00000000;
+
+  --light: #F7F2F2;
+  --stroke: #535252;
+  --dark: #13171f;
+}
+
 .Conditions_Screen {
-  background-color: brown;
+  background-color: var(--secondary);
 }
 
 .Conditions_Screen > .Conditions {
-  border: 2px solid black;
+  border: 2px solid var(--light);
 }
+
+.App_Screen {
+  background-color: var(--primary);
+}
+
+.App_Screen > .Header {
+  background-color: var(--secondary)
+}
+
+.App_Screen > .Header > .Header_Game {}
+
+.App_Screen > .Header > .Header_Game > .Header_Time {}
+
+.App_Screen > .Header > .Header_Game > .Header_Score {}
+
+.App_Screen > .Header > .Header_Game > .Header_Score > .Header_Score_Color {}
+
+.App_Screen > .Header > .Header_Game > .Header_Score > .Header_Score_Name {}
+
+.App_Screen > .Header > .Header_Game > .Header_Score > .Header_Score_Goals {}

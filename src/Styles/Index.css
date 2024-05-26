@@ -5,25 +5,16 @@
   --sizeL: 40px;
 }
 
-.TotalScreen {
+.Conditions_Layout {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  width: 100%;
+  width: 100svw;
   height: 100svh;
 }
 
-.Conditions_Screen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 100%;
-  height: 100svh;
-}
-
-.Conditions_Screen > .Conditions {
+.Conditions_Layout > .Conditions {
   display: flex;
   flex-direction: column;
 
@@ -35,6 +26,87 @@
   border-radius: var(--sizeM);
 }
 
+.App_Screen {
+  display: flex;
+  flex-direction: column;
+
+  width: 100svw;
+  height: 100svh;
+
+  gap: var(--gap);
+  padding: var(--gap);
+}
+
+.App_Screen > .Header {
+  display: flex;
+  justify-content: space-between;
+
+  height: var(--sizeL);
+  user-select: none;
+}
+
+.App_Screen > .Header > .Header_Game {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 100%;
+
+  border-radius: var(--bentogridradius);
+}
+
+.App_Screen > .Header > .Header_Game > .Header_Time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: auto;
+  height: 100%;
+
+  gap: var(--sizeM);
+  padding: 0 var(--sizeM);
+}
+
+.App_Screen > .Header > .Header_Game > .Header_Score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: auto;
+  height: 100%;
+
+  gap: var(--sizeM);
+  padding: 0 var(--sizeM);
+}
+
+.App_Screen > .Header > .Header_Game > .Header_Score > .Header_Score_Color {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: var(--size);
+
+  cursor: pointer;
+}
+
+.App_Screen > .Header > .Header_Game > .Header_Score > .Header_Score_Name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: calc(var(--size)*1.5);
+  height: var(--size);
+}
+
+.App_Screen > .Header > .Header_Game > .Header_Score > .Header_Score_Goals {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: var(--size);
+  height: var(--size);
+}
+/* 
 .Input {
   display: flex;
   justify-content: space-between;
@@ -51,4 +123,4 @@ button {
   border-radius: var(--sizeM);
   padding: var(--sizeS);
   width: min-content;
-}
+} */

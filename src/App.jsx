@@ -1,24 +1,26 @@
 //APP.JSX
 import React, { useState } from 'react';
-import Conditions from './Layouts/Conditions';
-import Time from './Components/Time';
 import { Provider } from 'react-redux';
 import store from '../src/Redux/Store';
 
-function App() {
-  const [showConditions, setShowConditions] = useState(true);
+import Conditions from './Layouts/Conditions';
+import Header from './Layouts/Header';
 
-  const handleContinue = () => {
+function App() {
+
+  let [showConditions, setShowConditions] = useState(true);
+  let handleContinue = () => {
     setShowConditions(false);
   };
 
   return (
     <Provider store={store}>
-      <div className="TotalScreen">
-        {showConditions ? (
+      <div className="TotalApp"> {showConditions ? (
           <Conditions onContinue={handleContinue} />
         ) : (
-          <Time />
+          <div className="App_Screen">
+            <Header />
+          </div>
         )}
       </div>
     </Provider>

@@ -1,8 +1,7 @@
 // STORE.JS
 import { createStore } from "redux";
-import { Provider } from "react-redux";
-import rootReducer from "./Reducers";
+import conditionsReducer from "./Reducers";
 
-const store = createStore(rootReducer);
+const store = createStore(conditionsReducer);
 
 export default store;

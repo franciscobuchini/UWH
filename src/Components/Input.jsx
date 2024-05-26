@@ -1,15 +1,15 @@
 // INPUT.JSX
 import React, { useState, useEffect } from "react";
 
-export default function Input({ id, type, value = "", LabelText, onChange }) {
-  const [Value, SetValue] = useState(value);
+export default function Input({ id, type, value = "", size, placeholder, Text, onChange }) {
+  let [Value, SetValue] = useState(value);
 
   useEffect(() => {
     SetValue(value);
   }, [value]);
 
-  const handleChange = (e) => {
-    const newValue = e.target.value;
+  let handleChange = (e) => {
+    let newValue = e.target.value;
     SetValue(newValue);
     if (onChange) {
       onChange(id, newValue);
@@ -17,9 +17,9 @@ export default function Input({ id, type, value = "", LabelText, onChange }) {
   };
 
   return (
-    <div className="Input">
-      <label htmlFor={id}> {LabelText} </label>
-      <input id={id} type={type} value={Value} onChange={handleChange}></input>
+    <div className="Input_Component">
+      <label className="Label" htmlFor={id}> {Text} </label>
+      <input className="Input" id={id} type={type} value={Value} size={size} placeholder={placeholder} onChange={handleChange}></input>
     </div>
   );
 }

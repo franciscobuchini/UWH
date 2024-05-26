@@ -1,10 +1,10 @@
 // BUTTON.JSX
 import React from 'react';
 
-export default function Button({ id, LabelText, onClick }) {
+export default function Button({ id, Text, onClick }) {
   return (
-    <button id={id} onClick={onClick}>
-      {LabelText}
+    <button className="Button" id={id} onClick={onClick}>
+      {Text}
     </button>
   );
 }
