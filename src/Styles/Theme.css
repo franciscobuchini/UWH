@@ -1,0 +1,7 @@
+.Conditions_Screen {
+  background-color: brown;
+}
+
+.Conditions_Screen > .Conditions {
+  border: 2px solid black;
+}

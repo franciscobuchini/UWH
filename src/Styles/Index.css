@@ -1,0 +1,54 @@
+#root {
+  --sizeXS: 5px;
+  --sizeS: 10px;
+  --sizeM: 20px;
+  --sizeL: 40px;
+}
+
+.TotalScreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100svh;
+}
+
+.Conditions_Screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100svh;
+}
+
+.Conditions_Screen > .Conditions {
+  display: flex;
+  flex-direction: column;
+
+  width: auto;
+  height: min-content;
+
+  padding: var(--sizeL);
+  gap: var(--sizeM);
+  border-radius: var(--sizeM);
+}
+
+.Input {
+  display: flex;
+  justify-content: space-between;
+
+  gap: var(--sizeM);
+}
+
+.Input > input, .Input {
+  border-radius: var(--sizeM);
+  padding: 0 var(--sizeM);
+}
+
+button {
+  border-radius: var(--sizeM);
+  padding: var(--sizeS);
+  width: min-content;
+}
