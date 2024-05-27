@@ -20,9 +20,12 @@ function App() {
           <Conditions onContinue={handleContinue} />
         ) : (
           <div className="App_Screen">
-            <Header />
+            <Header className="Header"/>
             <div className="App_Main">
-              <Pool />
+              <Pool className="Pool"/>
+              <div className="Panel">
+
+              </div>
             </div>
             
           </div>

@@ -1,6 +1,6 @@
 // STORE.JS
-import { createStore } from "redux";
-import conditionsReducer from "./Reducers";
+import { createStore } from 'redux';
+import conditionsReducer from './Reducers';
 
 const store = createStore(conditionsReducer);
 

@@ -39,17 +39,20 @@
 .App_Screen > .Header > .Header_Game > .Header_Score > .Header_Score_Goals {}
 
 .App_Screen > .App_Main > .Pool {
-  background-color: var(--primary);
-  border: 2px solid var(--dark);
+  background-color: var(--stroke);
+  border: 1px solid var(--dark);
 }
 
 .App_Screen > .App_Main > .Pool > .Pool_Grid {
+  background-color: var(--primary);
+  border: 1px solid var(--dark);
 }
 
 .App_Screen > .App_Main > .Pool > .Pool_Grid > .Pool_Area {
-  outline: 1px solid var(--dark);
+  border: 1px solid var(--dark);
 }
 
 .App_Screen > .App_Main > .Pool > .Pool_Grid > .Pool_Puck {
-  background-color: var(--tertiary);
+  background-color: var(--light);
+  border: 2px solid var(--dark);
 }
